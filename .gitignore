@@ -1,6 +1,3 @@
-# Ignore IntelliJ configurations
+# IntelliJ IDEA
 .idea/
-
-# Ignore system files
-.DS_Store
-Thumbs.db
+*.iml
