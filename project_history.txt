@@ -1,0 +1,18 @@
+Organizzazione delle cartelle:
+Inizialmente, la struttura delle cartelle è stata definita in modo standard, separando il backend dal frontend.
+È stato creato un progetto Maven per gestire le dipendenze e la compilazione.
+
+Problema con l'importazione delle dipendenze in IntelliJ:
+Mentre aggiungevo le dipendenze nel file pom.xml, IntelliJ non suggeriva correttamente gli import.
+Ho verificato la corretta configurazione di Maven all'interno di IntelliJ ed il corretto setup di JDK 21 per il progetto.
+
+Problema di compilazione Maven - JDK mancante:
+Maven non trovava il compilatore javac, restituendo errori di compilazione.
+Ho quindi installato JDK 21 attraverso Intellij, trovando poi il suo percorso, ho utilizzato quest'ultimo per la configurazione di JAVA_HOME per l'ambiente di sistema, dopodiché, ho verificato che il JDK fosse correttamente riconosciuto.
+
+Errore durante la compilazione di JPA - javax.persistence mancante:
+Durante la compilazione, i pacchetti javax.persistence e le annotazioni JPA (ad esempio le annotazioni @Entity, @Id) non venivano trovate.
+Aggiunta della dipendenza corretta di jakarta.persistence al file pom.xml.
+
+Mancata configurazione dei database nel progetto Spring Boot:
+Si prevede la configurazione di un database PostgreSQL per testare l'integrazione con JPA e la persistenza dei dati, ma è una soluzione ancora da implementare.
