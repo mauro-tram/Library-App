@@ -19,5 +19,10 @@ public class BookController {
         return bookService.getAllBooks();
     }
 
+    @PostMapping
+    public Book addBook(@RequestBody Book book) {
+        return bookService.addBook(book);
+    }
+
     // DELETE, PUT METHODS
 }
