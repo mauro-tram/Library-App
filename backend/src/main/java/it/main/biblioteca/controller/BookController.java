@@ -32,5 +32,12 @@ public class BookController {
         return bookService.addBook(book);
     }
 
-    // DELETE, PUT METHODS
+    @PutMapping("/{id}")
+    public ResponseEntity<Book> updateBook(@PathVariable Long id, @RequestBody Book updatedBook) {
+        return bookService.updateBook(id, updatedBook)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
+
+    // DELETE METHOD
 }
