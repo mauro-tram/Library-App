@@ -39,5 +39,11 @@ public class BookController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // DELETE METHOD
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteBook(@PathVariable Long id) {
+        boolean deleted = bookService.deleteBook(id);
+        return deleted ?
+                ResponseEntity.noContent().build() : // true
+                ResponseEntity.notFound().build(); // false
+    }
 }
