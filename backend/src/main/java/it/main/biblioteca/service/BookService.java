@@ -1,17 +1,19 @@
 package it.main.biblioteca.service;
 
-import it.main.biblioteca.model.Libro;
-import it.main.biblioteca.repository.LibroRepository;
+import it.main.biblioteca.model.Book;
+import it.main.biblioteca.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
-public class LibroService {
+public class BookService {
 
     @Autowired
-    private LibroRepository libroRepository;
+    private BookRepository bookRepository;
 
-    public Libro aggiungiLibro(Libro libro) {
-        return libroRepository.save(libro);
+    public List<Book> getAllBooks() {
+        return bookRepository.findAll();
     }
 }

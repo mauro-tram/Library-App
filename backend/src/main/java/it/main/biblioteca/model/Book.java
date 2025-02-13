@@ -4,7 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class Libro {
+public class Book {
 
     @Id
     private Long id;
@@ -17,7 +17,7 @@ public class Libro {
         return id;
     }
 
-    public Libro setId(Long id) {
+    public Book setId(Long id) {
         this.id = id;
         return this;
     }
@@ -26,7 +26,7 @@ public class Libro {
         return title;
     }
 
-    public Libro setTitle(String title) {
+    public Book setTitle(String title) {
         this.title = title;
         return this;
     }
@@ -35,7 +35,7 @@ public class Libro {
         return author;
     }
 
-    public Libro setAuthor(String author) {
+    public Book setAuthor(String author) {
         this.author = author;
         return this;
     }
@@ -44,7 +44,7 @@ public class Libro {
         return available;
     }
 
-    public Libro setAvailable(boolean available) {
+    public Book setAvailable(boolean available) {
         this.available = available;
         return this;
     }
@@ -53,7 +53,7 @@ public class Libro {
         return qty;
     }
 
-    public Libro setQty(int qty) {
+    public Book setQty(int qty) {
         this.qty = qty;
         return this;
     }
