@@ -1,5 +1,8 @@
 package it.main.biblioteca.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,6 +14,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "users") // renamed to avoid PostgreSQL conflicts
+@JsonIgnoreProperties({"max_BOOKS"})
 @Getter
 @Setter
 @NoArgsConstructor
