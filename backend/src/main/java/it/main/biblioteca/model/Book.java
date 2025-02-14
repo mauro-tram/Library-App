@@ -1,11 +1,19 @@
 package it.main.biblioteca.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class Book {
 
     @Id
@@ -13,51 +21,25 @@ public class Book {
     private Long id;
     private String title;
     private String author;
+
     private boolean available;
     private int qty;
 
-    public Long getId() {
-        return id;
+    @ManyToMany(mappedBy = "loanBooks")
+    private Set<User> users = new HashSet<>();
+
+    // Methods
+    public boolean borrowBook() {
+        if(qty > 0) {
+            qty--;
+            available = qty > 0;
+            return true;
+        }
+        return false;
     }
 
-    public Book setId(Long id) {
-        this.id = id;
-        return this;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public Book setTitle(String title) {
-        this.title = title;
-        return this;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public Book setAuthor(String author) {
-        this.author = author;
-        return this;
-    }
-
-    public boolean isAvailable() {
-        return available;
-    }
-
-    public Book setAvailable(boolean available) {
-        this.available = available;
-        return this;
-    }
-
-    public int getQty() {
-        return qty;
-    }
-
-    public Book setQty(int qty) {
-        this.qty = qty;
-        return this;
+    public void returnBook() {
+        qty++;
+        available = true;
     }
 }
