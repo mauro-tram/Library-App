@@ -29,8 +29,7 @@ Dando un occhiata alla mia Entità "Book" ho notato che si, c'era l'attributo "i
 valore che si occuperà di generare una chiave unica per noi, ad ogni entità inizializzata.
 Qualora nel database, PostgreSQL per questo progetto, non dovesse essere abilitato questo autoincremento, lancerò una query che cambierà questo parametro della colonna "id".
 
-
-
-
-
-
+Problemi con Lombok:
+Lombok offre alcune annotazioni utili, implementando @Getter e @Setter però, non generavano automaticamente i metodi
+descritti. Analizzando la situazione sull'IDE, ho scoperto che non era installato ed abilitato il plugin di Lombok.
+Una volta abilitato, il tutto si è risolto.
