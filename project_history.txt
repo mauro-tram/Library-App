@@ -33,3 +33,9 @@ Problemi con Lombok:
 Lombok offre alcune annotazioni utili, implementando @Getter e @Setter però, non generavano automaticamente i metodi
 descritti. Analizzando la situazione sull'IDE, ho scoperto che non era installato ed abilitato il plugin di Lombok.
 Una volta abilitato, il tutto si è risolto.
+
+Problemi con la costante "MAX_BOOKS" nell'entità User:
+Eseguendo una richiesta POST con curl, la stringa json, risultato dell'operazione continuava a restituire una variabile nominata "max_BOOKS", probabilmente
+condizionata dalla formattazione camelCase.
+Proprio per questo motivo, all'interno dell'entità User, ho inserito l'annotazione "@JsonIgnoreProperties({"max_BOOKS"})", poiché anche utilizzando "@JsonIgnore" al di
+sopra della dichiarazione della costante, quest'ultima veniva comunque serializzata. In questo modo, il problema è stato risolto.
