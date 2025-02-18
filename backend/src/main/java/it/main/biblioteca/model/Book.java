@@ -1,5 +1,6 @@
 package it.main.biblioteca.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -26,6 +27,7 @@ public class Book {
     private int qty;
 
     @ManyToMany(mappedBy = "loanBooks")
+    @JsonIgnore
     private Set<User> users = new HashSet<>();
 
     // Methods
