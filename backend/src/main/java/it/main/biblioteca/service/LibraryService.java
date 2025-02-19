@@ -28,7 +28,7 @@ public class LibraryService {
             User user = userOpt.get();
             Book book = bookOpt.get();
 
-            if (user.getLoanBooks().size() < user.getMAX_BOOKS() && book.isAvailable()) {
+            if (!user.getLoanBooks().contains(book) && user.getLoanBooks().size() < user.getMAX_BOOKS() && book.isAvailable()) {
                 user.getLoanBooks().add(book);
                 book.borrowBook();
                 userRepository.save(user);

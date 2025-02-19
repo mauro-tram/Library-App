@@ -14,7 +14,6 @@ public class LibraryController {
 
     @PostMapping("/{userId}/delivery/{bookId}")
     public ResponseEntity<String> bookDelivery(@PathVariable Long userId, @PathVariable Long bookId) {
-        System.out.println("Ci siamo");
         boolean added = libraryService.bookDelivery(userId, bookId);
         if(added) {
             return ResponseEntity.ok("Book added to user successfully.");
@@ -29,7 +28,6 @@ public class LibraryController {
             @PathVariable Long bookId,
             @RequestParam boolean isAccepted
     ) {
-        System.out.println("\n\n" + isAccepted + "\n\n");
         if(!libraryService.bookAccepted(isAccepted)) {
             return ResponseEntity.badRequest().body("Book not accepted.");
         }
