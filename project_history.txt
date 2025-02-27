@@ -62,7 +62,7 @@ FRONTEND
 Configurazione Tailwind:
 Ho riscontrato non pochi problemi nella sua configurazione. Ma perchè?
 Innanzitutto, l'intero progetto React, era si installato, ma con delle librerie non aggiornate, da qui i problemi.
-Dopo aver eseguito gli aggiornamenti di questi pacchetti (anche individualmente e manualmente, attraverso "npm update 
+Dopo aver eseguito gli aggiornamenti di questi pacchetti (anche individualmente e manualmente, attraverso "npm install 
 [nome_pacchetto]@latest" dopo un controllo eseguito con "npm outdated"), si è risolto il problema e si è potuto 
 procedere con la corretta configurazione del framework.
 Da questa problematica comprendo quanto utili siano tecnologie come Docker, lo terrò a mente.
