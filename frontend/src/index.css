@@ -1,5 +1,26 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary: oklch(37.47% 0.0585 201.68);
+  --color-secondary: oklch(96.68% 0.0095 93.57);
+  --color-tertiary: oklch(87.41% 0.0688 85.71);
+  --color-actions: oklch(77.41% 0.1345 34.08);
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url('./assets/fonts/Inconsolata-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  src: url('./assets/fonts/Inconsolata-Bold.ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
 @font-face {
   font-family: "Open Sans";
   src: url('./assets/fonts/OpenSans-Regular.ttf');
@@ -43,7 +64,7 @@
 }
 
 * {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Inconsolata", sans-serif;
 }
 
 body {

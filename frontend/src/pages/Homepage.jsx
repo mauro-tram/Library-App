@@ -4,8 +4,7 @@ const Homepage = () => {
     return (
         <>
             <div>
-                <h1 className='text-4xl text-black'>Library App</h1>
-                <p>Gestisci libri e utenti.</p>
+                <h1 className='text-6xl text-center text-black'><b>Library App</b> ti da il <br /> benvenuto!</h1>
             </div>
         </>
     )
