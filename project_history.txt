@@ -1,3 +1,5 @@
+BACKEND
+
 Organizzazione delle cartelle:
 Inizialmente, la struttura delle cartelle è stata definita in modo standard, separando il backend dal frontend.
 È stato creato un progetto Maven per gestire le dipendenze e la compilazione.
@@ -53,3 +55,14 @@ Per questo motivo, all'interno dell'entità User, ho inserito l'annotazione "@Js
 poiché anche utilizzando "@JsonIgnore" al di sopra della dichiarazione della costante, quest'ultima veniva comunque
 serializzata.
 In questo modo, il problema è stato risolto.
+
+
+FRONTEND
+
+Configurazione Tailwind:
+Ho riscontrato non pochi problemi nella sua configurazione. Ma perchè?
+Innanzitutto, l'intero progetto React, era si installato, ma con delle librerie non aggiornate, da qui i problemi.
+Dopo aver eseguito gli aggiornamenti di questi pacchetti (anche individualmente e manualmente, attraverso "npm update 
+[nome_pacchetto]@latest" dopo un controllo eseguito con "npm outdated"), si è risolto il problema e si è potuto 
+procedere con la corretta configurazione del framework.
+Da questa problematica comprendo quanto utili siano tecnologie come Docker, lo terrò a mente.
