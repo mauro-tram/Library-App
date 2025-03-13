@@ -1,36 +1,36 @@
 BACKEND
 
-Organizzazione delle cartelle:
+Feb 13, 2025 @ Organizzazione delle cartelle:
 Inizialmente, la struttura delle cartelle è stata definita in modo standard, separando il backend dal frontend.
 È stato creato un progetto Maven per gestire le dipendenze e la compilazione.
 
-Problema con l'importazione delle dipendenze in IntelliJ:
+Feb 13, 2025 @ Problema con l'importazione delle dipendenze in IntelliJ:
 Mentre aggiungevo le dipendenze nel file pom.xml, IntelliJ non suggeriva correttamente gli import.
 Ho verificato la corretta configurazione di Maven all'interno di IntelliJ ed il corretto setup di JDK 21 per il
 progetto.
 
-Problema di compilazione Maven - JDK mancante:
+Feb 13, 2025 @ Problema di compilazione Maven - JDK mancante:
 Maven non trovava il compilatore javac, restituendo errori di compilazione.
 Ho quindi installato JDK 21 attraverso Intellij, trovando poi il suo percorso, ho utilizzato quest'ultimo per la
 configurazione di JAVA_HOME per l'ambiente di sistema, dopodiché, ho verificato che il JDK fosse correttamente
 riconosciuto.
 
-Errore durante la compilazione di JPA - javax.persistence mancante:
+Feb 13, 2025 @ Errore durante la compilazione di JPA - javax.persistence mancante:
 Durante la compilazione, i pacchetti javax.persistence e le annotazioni JPA (ad esempio le annotazioni @Entity, @Id)
 non venivano trovate.
 Aggiunta della dipendenza corretta di jakarta.persistence al file pom.xml.
 
-Mancata configurazione dei database nel progetto Spring Boot:
+Feb 13, 2025 @ Mancata configurazione dei database nel progetto Spring Boot:
 Si prevede la configurazione di un database PostgreSQL per testare l'integrazione con JPA e la persistenza dei dati,
 ma è una soluzione ancora da implementare.
 
-Maven non riconosciuto dall'IDE (autocompletamento e suggerimenti assenti):
+Feb 13, 2025 @ Maven non riconosciuto dall'IDE (autocompletamento e suggerimenti assenti):
 In IntelliJ IDEA, ho aggiunto manualmente il progetto come Maven Project. Sul file pom.xml, tasto destro e "Add as
 Maven Project".
 Dopo questa operazione, l’IDE ha riconosciuto il progetto, scaricato le dipendenze e abilitato le funzionalità di
 autocompletamento.
 
-Richiesta POST con "curl" da terminale non funzionante (Restituendo Internal Server Error):
+Feb 14, 2025 @ Richiesta POST con "curl" da terminale non funzionante (Restituendo Internal Server Error):
 Il problema persisteva per via dell'autoincremento dell'id.
 Ho risolto dando un'occhiata ai log del server, nel terminale dove ho eseguito il comando "mvn spring-boot:run" per
 avviare la mia applicazione, ed ho trovato questo errore:
@@ -42,12 +42,12 @@ unica per noi, ad ogni entità inizializzata.
 Qualora nel database, PostgreSQL per questo progetto, non dovesse essere abilitato questo autoincremento, lancerò una
 query che cambierà questo parametro della colonna "id".
 
-Problemi con Lombok:
+Feb 14, 2025 @ Problemi con Lombok:
 Lombok offre alcune annotazioni utili, implementando @Getter e @Setter però, non generavano automaticamente i metodi
 descritti. Analizzando la situazione sull'IDE, ho scoperto che non era installato ed abilitato il plugin di Lombok.
 Una volta abilitato, il tutto si è risolto.
 
-Problemi con la costante "MAX_BOOKS" nell'entità User:
+Feb 17, 2025 @ Problemi con la costante "MAX_BOOKS" nell'entità User:
 Eseguendo una richiesta POST con curl, la stringa json, continuava a restituire una variabile nominata "max_BOOKS", e
 non "MAX_BOOKS" per ogni Utente nel database, nonostante non ci fosse una colonna dedicata, probabilmente la
 situazione è stata condizionata dalla formattazione camelCase.
@@ -59,7 +59,7 @@ In questo modo, il problema è stato risolto.
 
 FRONTEND
 
-Configurazione Tailwind:
+Feb 27, 2025 @ Configurazione Tailwind:
 Ho riscontrato non pochi problemi nella sua configurazione. Ma perchè?
 Innanzitutto, l'intero progetto React, era si installato, ma con delle librerie non aggiornate, da qui i problemi.
 Dopo aver eseguito gli aggiornamenti di questi pacchetti (anche individualmente e manualmente, attraverso "npm install 
