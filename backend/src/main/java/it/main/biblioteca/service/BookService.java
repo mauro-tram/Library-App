@@ -1,12 +1,14 @@
 package it.main.biblioteca.service;
 
 import it.main.biblioteca.model.Book;
+import it.main.biblioteca.model.User;
 import it.main.biblioteca.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class BookService {
@@ -43,5 +45,12 @@ public class BookService {
             return true;
         }
         return false;
+    }
+
+    // Other methods
+    public List<User> getUsersByBookId(Long id) {
+        return bookRepository.findById(id)
+                .map(Book::getUsers)
+                .orElseThrow(() -> new RuntimeException("Libro non trovato con ID: " + id));
     }
 }
