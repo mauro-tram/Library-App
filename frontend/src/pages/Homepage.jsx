@@ -1,12 +1,12 @@
 import React from 'react';
-import Button from '../components/Button';
+import Button from '../components/utility/Button';
 
 const Homepage = () => {
     return (
         <>
             <h1 className='text-6xl text-center text-black'><b>Library App</b> ti da il <br /> benvenuto!</h1>
-            <Button title={'Aggiungi Libro'} />
-            <Button title={'Aggiungi Utente'} />
+            <Button path="/books" title={'Visualizza Libri'} />
+            <Button path="/users" title={'Visualizza Utenti'} />
             <div className='flex items-center justify-between gap-4'>
                 <Button primary={false} title={'Cosa posso fare'}></Button>
                 <Button primary={false} title={'Come posso farlo'}></Button>
