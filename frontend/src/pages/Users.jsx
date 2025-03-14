@@ -1,6 +1,7 @@
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import UsersTable from "../components/user/UsersTable";
 import { getAllUsers } from "../api/userApi";
+import Button from "../components/utility/Button";
 
 const Users = () => {
     const [users, setUsers] = useState([]);
@@ -19,7 +20,7 @@ const Users = () => {
     }, []);
 
     return (
-        <div>
+        <>
             <h1 className='text-6xl font-bold text-center text-black'>UTENTI</h1>
             <div className='text-center text-sm text-[#989898] mt-8'>
                 <p>
@@ -29,7 +30,8 @@ const Users = () => {
                 </p>
             </div>
             <UsersTable users={users} />
-        </div>
+            <Button primary={false} title="Torna alla home" />
+        </>
     );
 }
 

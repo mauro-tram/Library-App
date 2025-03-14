@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BooksTable from "../components/book/BooksTable";
 import { getAllBooks } from "../api/bookApi";
+import Button from "../components/utility/Button";
 
 const Books = () => {
     const [books, setBooks] = useState([]);
@@ -19,7 +20,7 @@ const Books = () => {
     }, []);
 
     return (
-        <div>
+        <>
             <h1 className='text-6xl font-bold text-center text-black'>LIBRI</h1>
             <div className='text-center text-sm text-[#989898] mt-8'>
                 <p>
@@ -28,7 +29,8 @@ const Books = () => {
                 </p>
             </div>
             <BooksTable books={books} />
-        </div>
+            <Button primary={false} title="Torna alla home" />
+        </>
     );
 }
 
