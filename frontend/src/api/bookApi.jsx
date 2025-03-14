@@ -20,3 +20,13 @@ export const getBookById = async (id) => {
         throw error;
     }
 };
+
+export const getUsersByBookId = async (id) => {
+    try {
+        const response = await api.get("/books/" + id + "/users");
+        return response.data;
+    } catch (error) {
+        console.error("Errore nel recupero degli utenti che hanno il libro in prestito:", error);
+        throw error;
+    }
+}

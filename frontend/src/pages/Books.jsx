@@ -26,6 +26,7 @@ const Books = () => {
                 <p>
                     Qui puoi trovare tutti i libri della biblioteca<br />
                     Clicca su <span className="text-actions">"Visualizza"</span> per entrare nella scheda del libro<br />
+                    e poter visualizzare gli utenti che lo hanno preso in prestito.<br />
                 </p>
             </div>
             <BooksTable books={books} />

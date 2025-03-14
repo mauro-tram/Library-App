@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import BookInfo from "../components/BookInfo";
+import BookInfo from "../components/book/BookInfo";
 import Button from "../components/utility/Button";
 import NotFound from "../components/utility/NotFound";
 import { useParams } from "react-router-dom";
