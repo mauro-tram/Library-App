@@ -8,7 +8,7 @@ const Homepage = () => {
             <Button path="/books" title={'Visualizza Libri'} />
             <Button path="/users" title={'Visualizza Utenti'} />
             <div className='flex items-center justify-between gap-4'>
-                <Button primary={false} title={'Cosa posso fare'}></Button>
+                <Button path="/info" primary={false} title={'Cosa posso fare'}></Button>
                 <Button primary={false} title={'Come posso farlo'}></Button>
             </div>
             <div className='text-center text-sm text-[#989898] mt-24'>

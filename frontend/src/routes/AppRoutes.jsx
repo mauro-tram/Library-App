@@ -5,6 +5,7 @@ import SingleBook from '../pages/SingleBook.jsx';
 import SingleUser from '../pages/SingleUser.jsx';
 import Users from '../pages/Users.jsx';
 import Books from '../pages/Books.jsx';
+import Info from '../pages/Info.jsx';
 
 const AppRoutes = () => {
     return (
@@ -14,6 +15,7 @@ const AppRoutes = () => {
             <Route path="/books" element={<Books />} />
             <Route path="/users/:id" element={<SingleUser />} />
             <Route path="/users" element={<Users />} />
+            <Route path="/info" element={<Info />} />
         </Routes>
     );
 };
