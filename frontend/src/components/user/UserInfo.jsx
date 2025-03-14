@@ -1,5 +1,5 @@
 import React from "react";
-import BooksTable from "../books/BooksTable";
+import BooksTable from "../book/BooksTable";
 
 const UserInfo = ({ user }) => {
     let loanBooks = user.loanBooks;
